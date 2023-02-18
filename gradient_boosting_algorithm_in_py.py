@@ -1,3 +1,14 @@
+# Given the following algorithm, can you produce python equivalent code? $1.F_0(x) = \arg \min_{\rho} \sum_{i=1}^N L(y_i, \rho)$
+
+# $2. \text{For m = 1 to } M \text{ do:}$
+
+# $3.\tilde{y_i} = - \left[ \frac{\partial L(y_i, F(x_i))}{\partial F(x_i)} \right]_{F(x) = F_{m-1}(x)}, i = 1, N$
+
+# $4.a_m = \arg \min_{\alpha, \beta} \sum_{i=1}^N [\tilde{y_i} - \beta h(x_i; a)]^2$
+
+# $5.\rho_m = \arg \min_{\rho} \sum_{i=1}^N L(y_i, F_{m-1}(x_i) + \rho h(x_i ; a_m))$
+
+# $6.F_m(x) = F_{m-1}(x) + \rho_m h(x ; a_m)$
 import numpy as np
 
 # Define the loss function
